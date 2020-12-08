@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <cars name="Mazda">
+    <model>Mazda 3</model>
+    <model>Mazda 6</model>
+  </cars>
+</root>
