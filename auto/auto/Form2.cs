@@ -20,6 +20,8 @@ namespace auto
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            listView1.Clear();
             if (textBox1.Text != null && textBox1.Text.Length >=3)
             {
                 XmlDocument doc = new XmlDocument();
@@ -31,7 +33,7 @@ namespace auto
                     {
                         foreach (XmlNode child in node.ChildNodes)
                         {
-                            listView1.Clear();
+                            
                             listView1.Items.Add(child.InnerText);
                         }
                     }
@@ -44,6 +46,22 @@ namespace auto
                 textBox1.Text = string.Empty;
                 textBox1.Focus();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Audi";
+          
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Mazda";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Porsche";
         }
     }
 }
