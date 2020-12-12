@@ -58,6 +58,7 @@ namespace auto
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             textBox1.Text = "XI";
         }
 
@@ -104,6 +105,10 @@ namespace auto
             }
         }
 
+        private void discount1_Click(object sender, EventArgs e)
+        {
+            this.Text = _ertek;
+        }
     }
     
 }
