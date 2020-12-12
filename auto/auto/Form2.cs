@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,9 +66,44 @@ namespace auto
             textBox1.Text = "II";
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            if (textBox4.Text!= string.Empty && textBox3.Text != string.Empty && textBox3.Text != string.Empty)
+            {
+                if (textBox4.Text == "József Attila út 126" || textBox4.Text == "Sohanincs utca 53" || textBox4.Text == "Remélem nem bukok meg utca 2")
+                {
+                    SaveFileDialog sfd = new SaveFileDialog();
 
+                    sfd.InitialDirectory = Application.StartupPath;
+                    sfd.Filter = "Comma Seperated Values (*.csv)|*.csv";
+                    sfd.DefaultExt = "csv";
+                    sfd.AddExtension = true;
+                    if (sfd.ShowDialog() != DialogResult.OK) return;
+                    using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+                    {
+
+
+
+
+                        sw.Write(textBox1.Text);
+                        sw.Write(";");
+                        sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write("\n");
+
+                        MessageBox.Show("Sikeres mentés!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Érvénytelen cím!");
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Minden mező kitöltése kötelező!");
+            }
         }
+
     }
+    
 }

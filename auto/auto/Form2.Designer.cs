@@ -74,7 +74,6 @@
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Válassz címet!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -151,6 +150,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Foglalás";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox2
             // 
