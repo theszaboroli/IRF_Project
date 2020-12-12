@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <cars name="Mazda">
-    <model>Mazda 3</model>
-    <model>Mazda 6</model>
-  </cars>
+  <kerulet name="II">
+    <cim>Jozsef Attila út 126.</cim>
+  </kerulet>
+  <kerulet name="XVI">
+    <cim>Sohanincs utca 53</cim>
+  </kerulet>
+    <kerulet name="XI">
+    <cim>Remélem nem bukok meg utca 2</cim>
+  </kerulet>
 
-  <cars name="Audi">
-    <model>A8</model>
-  </cars>
 </root>

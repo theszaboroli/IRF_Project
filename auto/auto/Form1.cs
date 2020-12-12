@@ -50,5 +50,39 @@ namespace auto
                 MessageBox.Show("Rossz jelszó!");
             }
         }
+
+       
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Kérlek írd be a jelszót!");
+
+                }
+                else if (textBox1.Text == "IRF")
+                {
+                    Form2 home = new Form2();
+
+                    // Show the settings form
+
+                    this.Hide();
+                    home.Show();
+                }
+
+                else if (textBox1.Text == "EasterEGG")
+                {
+                    this.BackColor = Color.Fuchsia;
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Rossz jelszó!");
+                }
+            }
+        }
     }
 }

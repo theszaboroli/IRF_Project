@@ -21,8 +21,8 @@ namespace auto
         private void button1_Click(object sender, EventArgs e)
         {
 
-            listView1.Clear();
-            if (textBox1.Text != null && textBox1.Text.Length >=3)
+            textBox4.Clear();
+            if (textBox1.Text != null)
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load("XMLFile1.xml");
@@ -34,7 +34,8 @@ namespace auto
                         foreach (XmlNode child in node.ChildNodes)
                         {
                             
-                            listView1.Items.Add(child.InnerText);
+                           
+                            textBox4.Text = child.InnerText;
                         }
                     }
                 }
@@ -42,7 +43,7 @@ namespace auto
             }
             else
             {
-                MessageBox.Show("Hibás keresési érték!");
+                MessageBox.Show("A mező üres!");
                 textBox1.Text = string.Empty;
                 textBox1.Focus();
             }
@@ -50,18 +51,23 @@ namespace auto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Audi";
+            textBox1.Text = "XVI";
           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Mazda";
+            textBox1.Text = "XI";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Porsche";
+            textBox1.Text = "II";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
