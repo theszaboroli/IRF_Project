@@ -17,7 +17,9 @@ namespace auto
         public Form2()
         {
             InitializeComponent();
+
         }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,8 +36,8 @@ namespace auto
                     {
                         foreach (XmlNode child in node.ChildNodes)
                         {
-                            
-                           
+
+
                             textBox4.Text = child.InnerText;
                         }
                     }
@@ -53,12 +55,12 @@ namespace auto
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "XVI";
-          
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             textBox1.Text = "XI";
         }
 
@@ -69,7 +71,7 @@ namespace auto
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text!= string.Empty && textBox3.Text != string.Empty && textBox3.Text != string.Empty)
+            if (textBox4.Text != string.Empty && textBox3.Text != string.Empty && textBox3.Text != string.Empty)
             {
                 if (textBox4.Text == "József Attila út 126" || textBox4.Text == "Sohanincs utca 53" || textBox4.Text == "Remélem nem bukok meg utca 2")
                 {
@@ -88,7 +90,15 @@ namespace auto
 
                         sw.Write(textBox1.Text);
                         sw.Write(";");
-                        sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write("\n");
+                        sw.Write(textBox4.Text);
+                        sw.Write(";");
+                        sw.Write(dateTimePicker1.Text);
+                        sw.Write(";");
+                        sw.Write(textBox2.Text);
+                        sw.Write(";");
+                        sw.Write(textBox3.Text);
+                        sw.Write(";");
+                        sw.WriteLine(); 
 
                         MessageBox.Show("Sikeres mentés!");
                     }
@@ -104,10 +114,39 @@ namespace auto
                 MessageBox.Show("Minden mező kitöltése kötelező!");
             }
         }
+        //private string _ertek;
+        //public string Ertek
+        //{
+
+        //    get { return _ertek; }
+        //    set
+        //    {
+        //        if (textBox5.Text == "textBox5")
+                
+        //            _ertek = "100%";
+                
+        //    }
+        //}
+
 
         private void discount1_Click(object sender, EventArgs e)
         {
-            this.Text = _ertek;
+
+
+            textBox2.Text = _ertek;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button6.Text = "Mai ajánlatunk";
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            button6.Text = "20% kedvezmény: OOSDO1";
         }
     }
     

@@ -10,28 +10,27 @@ namespace auto
 {
     class discount : Button
     {
+
         private string _ertek;
-        TextBox t = Application.OpenForms["Form2"].Controls["textBox2"] as TextBox;
         public string Ertek
         {
-           
+
             get { return _ertek; }
             set
             {
-                if (t.Text == "textBox5")
+                if (kupon.Text == "OOSDO1")
                 {
-                    _ertek = "100%";
+                    _ertek = "20%";
                 }
             }
         }
-
 
         public discount()
         {
             Height = 50;
             Width = 200;
             BackColor = Color.Black;
-            Text = "Kattints ide a kedvezmény kiszámításához!";
+            Text = "Kattintsd ide, hogy kiszámold a kedvezményt!";
             ForeColor = Color.Red;
 
 
