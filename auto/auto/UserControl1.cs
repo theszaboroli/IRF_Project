@@ -16,25 +16,30 @@ namespace auto
         {
             InitializeComponent();
 
-           
 
 
-            }
 
-        private bool _value;
-        public bool Value
-        {
-            get { return _value; }
-            set
-            {
-                _value = value;
-                if (textBox1.Text=="OOSDO1")
-                {
-                    _value = true;
-                }
-                
-            }
         }
+
+        private string _kuponkod;
+        public string Kuponkod{
+        get{return _kuponkod;}
+        set{
+
+
+                _kuponkod = value;
+                if (_kuponkod=="oosdo1")
+                {
+                    textBox1.BackColor = Color.Green;
+                }
+                else
+                {
+                    textBox1.BackColor = Color.Red;
+                }
+}
+
+
+}
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -55,15 +60,7 @@ namespace auto
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (_value == true)
-            {
-                textBox1.BackColor = Color.Green;
-            }
-            else
-            {
-                textBox1.BackColor = Color.Red;
-
-            }
+            Kuponkod = textBox1.Text;
         }
     }
 }
