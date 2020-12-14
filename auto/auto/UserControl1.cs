@@ -28,7 +28,7 @@ namespace auto
 
 
                 _kuponkod = value;
-                if (_kuponkod=="oosdo1")
+                if (_kuponkod=="OOSDO1")
                 {
                     textBox1.BackColor = Color.Green;
                 }
