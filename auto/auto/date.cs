@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +7,15 @@ using System.Windows.Forms;
 
 namespace auto
 {
-    class kupon: TextBox
+    class date: DateTimePicker
     {
-        public kupon()
+
+        public date()
         {
-            if (this.Text == "OOSDO1")
-            {
-                this.BackColor = Color.Green;
-            }
+            this.MinDate = DateTime.Today; ;
+          
+
         }
+       
     }
 }
