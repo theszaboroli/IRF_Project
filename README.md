@@ -1,3 +1,3 @@
 # IRF_Project
 
-Terv: Egy autokereskedésselkapcsolatos alkalmazást szeretnék készíteni. A felhasználó rákeres az adott márkára és kilistázza az alkalmazás, hogy milyen típusok vannak elérhetőek. A típusokból nem lehet akármit hozzáadni, csak előre meghatározott fajtákat, ezt szeretném majd fet settel megoldani.
+Terv: Egy autószervizt képzeltem el, ahova időpontot lehet foglalni az alkalmazásomon keresztül. Ki lehet választani, hogy melyik kerület nekünk a legszinpatikusabb, akkor kiiírja a program az adott kerületben lévő autoszervíz címét. Ha a felhasználó megadott minden adatot, akkor a foglalást le tudjuk menteni egy CSV-be.
